@@ -15,7 +15,7 @@
 # Please submit bugfixes or comments via http://bugs.opensuse.org/
 #
 %define __noautoreq 'mono\\(StyleCop\\).*'
-
+%define __noautoprov 'mono\\(Mono.Nat\\)|mono\\(ICSharpCode.SharpZipLib\\)'
 
 Name:           openra
 Version:        20150614
@@ -37,6 +37,7 @@ BuildRequires:  shared-mime-info
 BuildRequires:  pkgconfig(mono)
 Requires:       %{_lib}SDL2_2.0_1
 BuildRequires:  lua5.1-devel
+BuildConflicts:	openra
 Requires:       lua5.1
 Requires:       mono
 Requires:       mono-winforms
