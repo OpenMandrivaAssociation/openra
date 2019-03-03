@@ -47,7 +47,7 @@ Red Alert as well as Dune 2000 if the original game files are
 provided.
 
 %prep
-%setup -q
+%setup -q -n OpenRA-release-20181215-source
 
 %build
 
