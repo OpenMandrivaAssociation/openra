@@ -51,10 +51,11 @@ provided.
 
 %build
 
-make dependencies
-make core
-make tools
-make docs
+%make_build
+#make dependencies
+#make core
+#make tools
+#make docs
 
 %install
 make DESTDIR="%{buildroot}" prefix=%{_prefix} install-all
