@@ -9,9 +9,9 @@ Url:            http://www.openra.net
 Summary:        Recreation of the early Command & Conquer games
 License:        GPL-3.0
 Group:          Games/Strategy
-Source:         https://github.com/OpenRA/OpenRA/releases/download/release-%{version}/%{oname}-release-%{version}-source.tar.bz2
-Source2:        thirdparty.tar.gz
-Source3:        http://geolite.maxmind.com/download/geoip/database/GeoLite2-Country.mmdb.gz
+Source0:         https://github.com/OpenRA/OpenRA/releases/download/release-%{version}/%{oname}-release-%{version}-source.tar.bz2
+#Source2:        thirdparty.tar.gz
+#Source3:        http://geolite.maxmind.com/download/geoip/database/GeoLite2-Country.mmdb.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 BuildArch:      noarch
 BuildRequires:  desktop-file-utils
@@ -45,19 +45,9 @@ Red Alert as well as Dune 2000 if the original game files are
 provided.
 
 %prep
-%setup -q -a2
-make version
+%setup -q
 
 %build
-mkdir -p ./thirdparty/download
-
-cp %{SOURCE3} ./thirdparty/download
-
-# support latest SDL 2.0.3
-sed -i 's/libSDL2-2.0.so.0/libSDL2-2.0.so.1/' thirdparty/SDL2-CS.dll.config
-
-ln -sf %{_prefix}/lib/mono-nat/Mono.Nat.dll ./thirdparty/download/Mono.Nat.dll
-ln -sf %{_prefix}/lib/mono/sharpziplib/ICSharpCode.SharpZipLib.dll ./thirdparty/download/ICSharpCode.SharpZipLib.dll
 
 make dependencies
 make core
