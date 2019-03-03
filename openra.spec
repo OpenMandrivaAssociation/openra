@@ -1,30 +1,15 @@
-#
-# spec file for package openra
-#
-# Copyright (c) 2015 SUSE LINUX Products GmbH, Nuernberg, Germany.
-#
-# All modifications and additions to the file contributed by third parties
-# remain the property of their copyright owners, unless otherwise agreed
-# upon. The license for this file, and modifications and additions to the
-# file, is the same license as for the pristine package itself (unless the
-# license for the pristine package is not an Open Source License, in which
-# case the license is the MIT License). An "Open Source License" is a
-# license that conforms to the Open Source Definition (Version 1.9)
-# published by the Open Source Initiative.
-
-# Please submit bugfixes or comments via http://bugs.opensuse.org/
-#
+%define oname OpenRA
 %define __noautoreq 'mono\\(StyleCop\\).*'
 %define __noautoprov 'mono\\(Mono.Nat\\)|mono\\(ICSharpCode.SharpZipLib\\)'
 
 Name:           openra
-Version:        20150614
+Version:        20181215
 Release:        1
 Url:            http://www.openra.net
 Summary:        Recreation of the early Command & Conquer games
 License:        GPL-3.0
 Group:          Games/Strategy
-Source:         OpenRA-%{version}.tar.bz2
+Source:         https://github.com/OpenRA/OpenRA/releases/download/release-%{version}/%{oname}-release-%{version}-source.tar.bz2
 Source2:        thirdparty.tar.gz
 Source3:        http://geolite.maxmind.com/download/geoip/database/GeoLite2-Country.mmdb.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
@@ -60,7 +45,7 @@ Red Alert as well as Dune 2000 if the original game files are
 provided.
 
 %prep
-%setup -q -n OpenRA-%{version} -a2
+%setup -q -a2
 make version
 
 %build
