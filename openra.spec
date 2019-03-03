@@ -20,8 +20,10 @@ BuildRequires:  git
 BuildRequires:  hicolor-icon-theme
 BuildRequires:  shared-mime-info
 BuildRequires:  pkgconfig(mono)
+BuildRequires:  pkgconfig(lua)
+
 Requires:       %{_lib}SDL2_2.0_1
-BuildRequires:  lua5.1-devel
+
 BuildConflicts:	openra
 Requires:       lua5.1
 Requires:       mono
