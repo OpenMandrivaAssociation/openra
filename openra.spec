@@ -9,7 +9,7 @@ Url:            http://www.openra.net
 Summary:        Recreation of the early Command & Conquer games
 License:        GPL-3.0
 Group:          Games/Strategy
-Source0:         https://github.com/OpenRA/OpenRA/releases/download/release-%{version}/%{oname}-release-%{version}-source.tar.bz2
+Source0:         %{oname}-release-%{version}-source.tar.gz
 #Source2:        thirdparty.tar.gz
 #Source3:        http://geolite.maxmind.com/download/geoip/database/GeoLite2-Country.mmdb.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
