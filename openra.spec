@@ -20,7 +20,7 @@
 Name:           openra
 Version:        20150614
 Release:        1
-Url:            http://www.openra.net
+Url:            https://www.openra.net
 Summary:        Recreation of the early Command & Conquer games
 License:        GPL-3.0
 Group:          Games/Strategy
