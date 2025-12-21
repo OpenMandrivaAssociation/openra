@@ -29,6 +29,7 @@ Source2:        thirdparty.tar.gz
 Source3:        http://geolite.maxmind.com/download/geoip/database/GeoLite2-Country.mmdb.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 BuildArch:      noarch
+BuildRequires:	make
 BuildRequires:  desktop-file-utils
 BuildRequires:  fdupes
 BuildRequires:  git
